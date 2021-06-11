@@ -8,6 +8,11 @@ const PostController = require("./controllers/PostController");
 
 const routes = Router();
 
+//healthy check route
+routes.get("/", (req, res) => {
+  res.status(200).send("OK");
+})
+
 routes.post("/auth", UserController.auth);
 routes.post("/register", UserController.store);
 
