@@ -4,7 +4,7 @@ const getUserIdByToken = require("../services/getUserBytoken")
 
 class PostController {
   async index(req, res) {
-    const posts = await UserModel.findAll();
+    const posts = await PostModel.findAll();
 
     return res.status(200).json(posts);
   }
